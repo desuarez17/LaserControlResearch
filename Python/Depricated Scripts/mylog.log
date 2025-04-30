@@ -1,0 +1,81 @@
+
+===============================================================================
+       NEW SESSION - 04/17/2025, 15:58:30
+===============================================================================
+LEVEL - INSTANCE NAME - MODULE - FUNCTION - MESSAGE
+DEBUG - pymapdl_global -  launcher - get_start_instance - 'PYMAPDL_START_INSTANCE' is unset, and there is no supplied value. Using default, which is 'True'.
+DEBUG - pymapdl_global -  launcher - get_start_instance_arg - Using 'start_instance' equal to True
+DEBUG - pymapdl_global -  launcher - get_ip - No IP address was supplied. Using the default IP address: 127.0.0.1
+DEBUG - pymapdl_global -  launcher - get_port - Using default port: 50052
+DEBUG - pymapdl_global -  launcher - get_port - Port in use.  Incrementing port number. port=50053
+DEBUG - pymapdl_global -  launcher - get_port - Using default port 50053
+DEBUG - pymapdl_global -  launcher - get_exec_file - Using default executable.
+DEBUG - pymapdl_global -  misc - create_temp_dir - Created run location at C:\Users\damia\AppData\Local\Temp\apirxordhw
+DEBUG - pymapdl_global -  launcher - get_run_location - Using default temporary directory for MAPDL run location: C:\Users\damia\AppData\Local\Temp\apirxordhw
+DEBUG - pymapdl_global -  launcher - get_run_location - Using run location at C:\Users\damia\AppData\Local\Temp\apirxordhw
+DEBUG - pymapdl_global -  launcher - check_lock_file - Checking for lock file
+DEBUG - pymapdl_global -  launcher - check_mode - Using mode grpc
+DEBUG - pymapdl_global -  launcher - force_smp_in_student - Student version detected, using '-smp' switch by default.
+DEBUG - pymapdl_global -  launcher - launch_mapdl - Using additional switches  -smp.
+DEBUG - pymapdl_global -  launcher - generate_start_parameters - Using start parameters {'additional_switches': ' -smp', 'exec_file': 'C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v251\\ansys\\bin\\winx64\\ansys251.exe', 'ip': '127.0.0.1', 'jobname': 'file', 'launch_on_hpc': False, 'nproc': 2, 'override': False, 'port': 50053, 'print_com': False, 'ram': None, 'run_location': 'C:\\Users\\damia\\AppData\\Local\\Temp\\apirxordhw', 'start_instance': True, 'start_timeout': 45, 'timeout': 45, 'launched': True}
+DEBUG - pymapdl_global -  launcher - launch_mapdl - Starting MAPDL
+DEBUG - pymapdl_global -  launcher - generate_mapdl_launch_command - Generated command: C:\Program Files\ANSYS Inc\ANSYS Student\v251\ansys\bin\winx64\ansys251.exe -j file -np 2 -b -i .__tmp__.inp -o .__tmp__.out  -smp -port 50053 -grpc
+INFO - pymapdl_global -  launcher - launch_grpc - 
+============
+============
+Running an MAPDL instance
+Location:
+C:\Users\damia\AppData\Local\Temp\apirxordhw
+Command:
+C:\Program Files\ANSYS Inc\ANSYS Student\v251\ansys\bin\winx64\ansys251.exe -j file -np 2 -b -i .__tmp__.inp -o .__tmp__.out  -smp -port 50053 -grpc
+Env vars:
+{'ACSVCPORT': '17532', 'ALLUSERSPROFILE': 'C:\\ProgramData', 'ANSYS251_DIR': 'C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v251\\ANSYS', 'APPDATA': 'C:\\Users\\damia\\AppData\\Roaming', 'AWP_LOCALE251': 'en-us', 'AWP_ROOT251': 'C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v251', 'CADOE_LIBDIR251': 'C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v251\\CommonFiles\\Language\\en-us', 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files', 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files', 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files', 'COMPUTERNAME': 'DAMLAP', 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe', 'DRIVERDATA': 'C:\\Windows\\System32\\Drivers\\DriverData', 'EFC_13784_1592913036': '1', 'HOMEDRIVE': 'C:', 'HOMEPATH': '\\Users\\damia', 'LOCALAPPDATA': 'C:\\Users\\damia\\AppData\\Local', 'LOGONSERVER': '\\\\DAMLAP', 'LSTC_LICENSE': 'Ansys', 'NUMBER_OF_PROCESSORS': '32', 'ONEDRIVE': 'C:\\Users\\damia\\OneDrive', 'ONEDRIVECONSUMER': 'C:\\Users\\damia\\OneDrive', 'OS': 'Windows_NT', 'PATH': 'C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\dotnet\\;C:\\Program Files\\MATLAB\\R2024b\\runtime\\win64;C:\\Program Files\\MATLAB\\R2024b\\bin;C:\\Users\\damia\\AppData\\Local\\Programs\\Python\\Launcher\\;C:\\Users\\damia\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\damia\\AppData\\Local\\Programs\\Microsoft VS Code\\bin', 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC', 'PROCESSOR_ARCHITECTURE': 'AMD64', 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 183 Stepping 1, GenuineIntel', 'PROCESSOR_LEVEL': '6', 'PROCESSOR_REVISION': 'b701', 'PROGRAMDATA': 'C:\\ProgramData', 'PROGRAMFILES': 'C:\\Program Files', 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)', 'PROGRAMW6432': 'C:\\Program Files', 'PSMODULEPATH': 'C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules', 'PUBLIC': 'C:\\Users\\Public', 'PYCHARM_HOSTED': '1', 'PYTHONIOENCODING': 'UTF-8', 'PYTHONPATH': 'C:\\Users\\damia\\OneDrive\\Desktop\\drive\\School Vault\\RIT\\Research\\Ansys', 'PYTHONUNBUFFERED': '1', 'P_SCHEMA': 'C:\\Program Files\\ANSYS Inc\\ANSYS Student\\v251\\AISOL\\CADIntegration\\Parasolid\\PSchema', 'RLSSVCPORT': '22112', 'SESSIONNAME': 'Console', 'SYSTEMDRIVE': 'C:', 'SYSTEMROOT': 'C:\\Windows', 'TEMP': 'C:\\Users\\damia\\AppData\\Local\\Temp', 'TMP': 'C:\\Users\\damia\\AppData\\Local\\Temp', 'USERDOMAIN': 'DAMLAP', 'USERDOMAIN_ROAMINGPROFILE': 'DAMLAP', 'USERNAME': 'damia', 'USERPROFILE': 'C:\\Users\\damia', 'WINDIR': 'C:\\Windows', 'ZES_ENABLE_SYSMAN': '1', 'ANS_CMD_NODIAG': 'TRUE'}
+============
+============
+DEBUG - pymapdl_global -  launcher - launch_grpc - Writing temporary input file: .__tmp__.inp with 'FINISH' command.
+DEBUG - pymapdl_global -  launcher - launch_grpc - MAPDL starting in background.
+DEBUG - pymapdl_global -  launcher - check_mapdl_launch - Generating queue object for stdout
+DEBUG - pymapdl_global -  launcher - check_mapdl_launch - Checking process is alive
+DEBUG - pymapdl_global -  launcher - check_mapdl_launch - Checking file error is created
+DEBUG - pymapdl_global -  launcher - _check_file_error_created - MAPDL session successfully started (Error file found)
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - __init__ - Logging set to DEBUG
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - __init__ - Creating channel to 127.0.0.1:50053
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - _create_channel - Opening insecure channel at 127.0.0.1:50053
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - connectivity_callback - Channel connectivity changed to: ChannelConnectivity.IDLE
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - connectivity_callback - Channel connectivity changed to: ChannelConnectivity.CONNECTING
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - _multi_connect - Connection attempt 1
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - connectivity_callback - Channel connectivity changed to: ChannelConnectivity.TRANSIENT_FAILURE
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - connectivity_callback - Channel connectivity changed to: ChannelConnectivity.READY
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - _connect - Established connection to MAPDL gRPC
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - _multi_connect - Connected
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - __init__ - Connection established
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - __init__ - Attached MAPDL object to MapdlMesh.
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - __enter__ - Caching routine Begin level
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - __exit__ - Restoring routine 'Begin level'
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - run - Running (verbose: False, mute=True): 'FINISH,'
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - __enter__ - Caching routine Begin level
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - run - Running (verbose: False, mute=True): '/POST26'
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - run - Running (verbose: False, mute=True): 'NUMVAR,200'
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - __exit__ - Restoring routine 'Begin level'
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - run - Running (verbose: False, mute=True): 'FINISH,'
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - run - Running (verbose: False, mute=False): '/INQUIRE,,DIRECTORY,,'
+INFO - GRPC_127.0.0.1:50053 -  mapdl_core - run - PARAMETER  = C:\Users\damia\AppData\Local\Temp\apirxordhw
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - run - Running (verbose: False, mute=False): '/SHOW,PNG,,,'
+INFO - GRPC_127.0.0.1:50053 -  mapdl_core - run - /SHOW SWITCH PLOTS TO  PNG         - RASTER MODE.
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - run - Running (verbose: False, mute=False): '/INQUIRE,,DIRECTORY,,'
+INFO - GRPC_127.0.0.1:50053 -  mapdl_core - run - PARAMETER  = C:\Users\damia\AppData\Local\Temp\apirxordhw
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - _cache_pids - Caching PIDs
+DEBUG - GRPC_127.0.0.1:50053 -  mesh_grpc - _reset_cache - Resetting cache
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - run - Running (verbose: False, mute=False): '/INQUIRE,,DIRECTORY,,'
+INFO - GRPC_127.0.0.1:50053 -  mapdl_core - run - PARAMETER  = C:\Users\damia\AppData\Local\Temp\apirxordhw
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_grpc - _cache_pids - Recaching PIDs: [46712, 46736, 46784]
+DEBUG - GRPC_127.0.0.1:50053 -  mapdl_core - _check_mapdl_os - MAPDL is running on windows OS.
+INFO - GRPC_127.0.0.1:50053 -  mapdl_grpc - __init__ - Connected to MAPDL server running at localhost on 127.0.0.1:50053 on windows OS

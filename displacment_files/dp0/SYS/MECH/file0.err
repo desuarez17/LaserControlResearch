@@ -1,0 +1,10 @@
+/COM,ANSYS RELEASE 2024 R1           BUILD 24.1      UP20231106       19:40:45
+
+ *** WARNING ***                         CP =       0.156   TIME= 19:40:46
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** ERROR ***                           CP =       0.422   TIME= 19:40:47
+ Unknown label in field 5 ( ) of *GET command.                           
+  Line= *GET, nodeID, NODE, i                                            
+  The *GET command is ignored.                                           

@@ -1,0 +1,120 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+system1 = GetSystem(Name="SYS")
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+designPoint1 = Parameters.GetDesignPoint(Name="0")
+parameter1 = Parameters.GetParameter(Name="P6")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="1 [um]")
+parameter2 = Parameters.GetParameter(Name="P9")
+designPoint1.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="2 [um]")
+parameter3 = Parameters.GetParameter(Name="P11")
+designPoint1.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="1 [um]")
+parameter4 = Parameters.GetParameter(Name="P24")
+designPoint1.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="3 [um]")
+model1.Exit()
+model1.Edit()
+model1.Exit()
+Save(Overwrite=True)
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+setupComponent1 = system1.GetComponent(Name="Setup")
+setupComponent1.Refresh()
+setup1 = system1.GetContainer(ComponentName="Setup")
+setup1.Edit()
+model1.Exit()
+Save(Overwrite=True)
+Archive(
+    FilePath="E:/School Vault/RIT/Research/Ansys/Parametized 5by5.wbpz",
+    IncludeExternalImportedFiles=True)
+setup1.Edit()
+model1.Exit()
+parameter5 = Parameters.GetParameter(Name="P1")
+designPoint1.SetParameterExpression(
+    Parameter=parameter5,
+    Expression="0 [um]")
+parameter6 = Parameters.GetParameter(Name="P2")
+designPoint1.SetParameterExpression(
+    Parameter=parameter6,
+    Expression="1.2 [um]")
+parameter7 = Parameters.GetParameter(Name="P3")
+designPoint1.SetParameterExpression(
+    Parameter=parameter7,
+    Expression="1 [um]")
+designPoint1.SetParameterExpression(
+    Parameter=parameter1,
+    Expression="2 [um]")
+parameter8 = Parameters.GetParameter(Name="P7")
+designPoint1.SetParameterExpression(
+    Parameter=parameter8,
+    Expression="3 [um]")
+parameter9 = Parameters.GetParameter(Name="P8")
+designPoint1.SetParameterExpression(
+    Parameter=parameter9,
+    Expression="3.5 [um]")
+designPoint1.SetParameterExpression(
+    Parameter=parameter2,
+    Expression="0 [um]")
+designPoint1.SetParameterExpression(
+    Parameter=parameter3,
+    Expression="2 [um]")
+parameter10 = Parameters.GetParameter(Name="P13")
+designPoint1.SetParameterExpression(
+    Parameter=parameter10,
+    Expression="2.3 [um]")
+parameter11 = Parameters.GetParameter(Name="P15")
+designPoint1.SetParameterExpression(
+    Parameter=parameter11,
+    Expression="1 [um]")
+parameter12 = Parameters.GetParameter(Name="P16")
+designPoint1.SetParameterExpression(
+    Parameter=parameter12,
+    Expression="1 [um]")
+parameter13 = Parameters.GetParameter(Name="P17")
+designPoint1.SetParameterExpression(
+    Parameter=parameter13,
+    Expression="2 [um]")
+parameter14 = Parameters.GetParameter(Name="P19")
+designPoint1.SetParameterExpression(
+    Parameter=parameter14,
+    Expression="3.5 [um]")
+parameter15 = Parameters.GetParameter(Name="P20")
+designPoint1.SetParameterExpression(
+    Parameter=parameter15,
+    Expression="1.8 [um]")
+parameter16 = Parameters.GetParameter(Name="P22")
+designPoint1.SetParameterExpression(
+    Parameter=parameter16,
+    Expression="0.8 [um]")
+parameter17 = Parameters.GetParameter(Name="P23")
+designPoint1.SetParameterExpression(
+    Parameter=parameter17,
+    Expression="3.1 [um]")
+designPoint1.SetParameterExpression(
+    Parameter=parameter4,
+    Expression="2.39 [um]")
+parameter18 = Parameters.GetParameter(Name="P25")
+designPoint1.SetParameterExpression(
+    Parameter=parameter18,
+    Expression="1 [um]")
+designPoint1.SetParameterExpression(
+    Parameter=parameter18,
+    Expression="0 [um]")
+designPoint1.SetParameterExpression(
+    Parameter=parameter15,
+    Expression="0 [um]")
+Save(Overwrite=True)
+modelComponent1.Refresh()
+setupComponent1.Refresh()
+setup1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)

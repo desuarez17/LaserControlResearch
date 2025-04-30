@@ -1,0 +1,50 @@
+! APDL Script to Modify Multiple Parameters
+/PREP7
+*SET, P1, 0.000000
+*SET, P2, 1.335455
+*SET, P3, 2.679309
+*SET, P4, 2.783200
+*SET, P5, 0.000000
+*SET, P6, 1.714175
+*SET, P7, 1.559552
+*SET, P8, 2.262096
+*SET, P9, 2.482777
+*SET, P10, 2.641403
+*SET, P11, 0.966088
+*SET, P12, 2.378959
+*SET, P13, 2.292843
+*SET, P14, 0.569141
+*SET, P15, 0.416492
+*SET, P16, 1.744274
+*SET, P17, 3.359104
+*SET, P18, 1.191350
+*SET, P19, 2.048437
+*SET, P20, 0.783342
+*SET, P21, 0.000000
+*SET, P22, 0.892833
+*SET, P23, 1.770850
+*SET, P24, 2.446769
+*SET, P25, 0.000000
+FINISH
+
+/SOLU
+SOLVE
+FINISH
+
+/POST1
+SET,LAST ! Select the last solved load step
+
+*GET, numNodes, NODE, 0, COUNT ! Get total number of nodes
+
+! Loop through all nodes to extract Z-displacement
+*DIM, Uz_values, ARRAY, numNodes
+*DO, i, 1, numNodes
+    *GET, nodeID, NODE, i
+    *GET, Uz_values(i), NODE, nodeID, U, Z
+*ENDDO
+
+! Print values to a file
+/OUTPUT, z_deflection_results, txt
+*VWRITE, (Uz_values)
+(U10.5)
+FINISH

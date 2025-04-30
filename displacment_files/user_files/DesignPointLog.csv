@@ -1,0 +1,12 @@
+﻿# 
+# This file contains the parameter values of the Design Points successfully updated by Ansys Workbench.
+# Project name: displacment
+# Creation date: 03/31/2025 18:19:16
+# 
+# 03/31/2025 18:19:16
+# The parameters defined in the project are:
+# ,P1 - Displacement Z Component [um],P2 - Displacement 2 Z Component [um]
+# 
+# The following header line defines the name of the columns by reference to the parameters.
+Name,P1,P2
+DP 0,3.5,0
