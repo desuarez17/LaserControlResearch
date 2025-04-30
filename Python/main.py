@@ -91,7 +91,7 @@ def ConstrainByServo(ServoDisplacmentVect,Cellwidth,Servo_width,DeviceWidth):
         #Build map from ServoIndex to xy
         corner_indices = [0, N - 1, N ** 2 - N, N ** 2 - 1]
         j = 0
-        for i in range(N**2):
+        for i in range(N**2): #map the components
             #Check if in the corners
             if i not in corner_indices:
 
@@ -102,14 +102,6 @@ def ConstrainByServo(ServoDisplacmentVect,Cellwidth,Servo_width,DeviceWidth):
                 servo_dict.update({label:ServoDisplacmentVect[j]})# Add to the server dict that maps componets
                 print(f"Building:{label}, x,y [{x_center,y_center}],Z_disp:{ServoDisplacmentVect[j]}")
                 NodeList_new = ConstrainNodes(mapdl,label,x_center,y_center,Servo_width,ServoDisplacmentVect[j], plotme=False)
-                # print(NodeList_new)
-                print(NodeList_new.shape)
-                if j == 0:
-                    pass
-                    #NodeList = NodeList_new
-                else:
-                    pass
-                    #NodeList = np.vstack((NodeList, NodeList_new))
                 j = j + 1
 
         return servo_dict
@@ -175,19 +167,22 @@ def main(mapdl):
 
         # now plot nodal Z displacement (DOF = UZ)
         # mapdl.plnsol('UZ')
-        mapdl.post_processing.plot_nodal_displacement('Z',show_node_numbering=False)
-        #Show max Stress
-        result = mapdl.result
-        result.plot_element_displacement(
-            "Z",
-            smooth_shading = True,
-            lighting=False,
-            background="w",
-            show_edges=True,
-            text_color="k",
-            add_text=False,
-        )
+        mapdl.post_processing.plot_nodal_displacement('Z',smooth_shading = True,show_node_numbering=False)
 
+        #Remove Servo constriants
+        start = True
+        for key,value in servo_dict.items():
+            mapdl.cmsel('s', key)
+            mapdl.ddele('ALL', 'ALL')
+            mapdl.d('ALL', 'UZ', '', key)
+        mapdl.allsel()
+
+        mapdl.slashsolu()  # = /SOLU
+        mapdl.antype("MODAL")  # modal analysis
+        mapdl.modopt("LANB", 40)  # Lanczos, keep 40 modes (pick your own number)
+        mapdl.mxpand(40, 0, 0, "YES")  # writes the mode-shape tables for MSUP later
+        mapdl.solve()
+        mapdl.finish()
         # Close Mechanical
         mapdl.exit()
     except Exception as e:
