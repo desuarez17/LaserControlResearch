@@ -63,20 +63,23 @@ def platebuilder(mapdl,DeviceWidth,Nside,Servo_width,Cellwidth,thickness=1):
     #mapdl.vplot(vtk=True, show_lines=True, show_axes=True, smooth_shading=True)
 
     return cellinfo,servo_area_ids
-def platebuilderV2(mapdl,DeviceWidth,Nside,Servo_width,Cellwidth,thickness=1):
+def platebuilderV2(mapdl,DeviceWidth,Nside,Servo_width,Cellwidth,thickness=1,plot = True,Resolution = 0.02):
     print("Begining Geometry Builder")
 
     # Start GeoBuild
     mapdl.prep7()
 
     mapdl.blc5(0, 0, width=DeviceWidth, height=DeviceWidth, depth=thickness)  # main area
+    mapdl.esize(Resolution)
     mapdl.et(1, "SOLID186")
 
     mapdl.mshkey(0)
     mapdl.mshape(1, "3D")
-    # mapdl.SMRT(6)
+    #mapdl.SMRT(6)
+
     mapdl.vsweep("all")
-    mapdl.eplot(vtk=True, show_edges=True, show_axes=False, line_width=2, background="w")
+    if plot:
+        mapdl.eplot(vtk=True, show_edges=True, show_axes=False, line_width=2, background="w")
 
     # Dictionary to track origins and area indices
     cellinfo = {}
